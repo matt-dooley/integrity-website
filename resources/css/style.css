@@ -488,7 +488,7 @@ header .mobile {
 
     width: calc(25% - 16px); /* set the width of each object to 50% minus the margin */
     /* height: 100px; set the height of each object to 100px */
-    background-color: #ccc; /* set a background color for each object */
+    /* background-color: #ccc; set a background color for each object */
 
 }
 
@@ -710,5 +710,152 @@ footer .copyright {
 @media only screen and (max-width: 600px) {
     footer .content {
         font-size: .625rem;
+    }
+}
+
+/* Safety Tab */
+/* ------------------------------------------------------------------------------------ */
+
+/* Safety Section */
+.safety-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 5%;
+    background-color: #f3f3f3;
+
+    flex-direction: column;
+}
+
+.safety-container {
+    flex: 1;
+    padding: 2rem;
+    margin: 0px 1.25rem;
+    background-color: white;
+
+    /* these are the variables that i am messing around with and testing */
+    margin: 10px 0;
+}
+
+.safety-object {
+    text-align: center;
+
+    /* these are the variables that i am messing around with and testing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* derived from: .safety-object */
+.safety-header-object {
+    text-align: center;
+
+    /* these are the variables that i am messing around with and testing */
+    display: flex;
+
+    /* changing this */
+    justify-content: center;
+    align-items: center;
+
+}
+
+.safety-image-container {
+    width: 90%;
+    height: 65%;
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    /* these are the variables that i am messing around with and testing */
+    margin-right: 32px;
+
+    width: calc(25% - 16px); /* set the width of each object to 50% minus the margin */
+    /* height: 100px; set the height of each object to 100px */
+    /* background-color: #ccc; set a background color for each object */
+
+}
+
+.safety-image-container img {
+    display: block;
+    max-width: 100%;
+
+    /* these are the variables that i am messing around with and testing */
+    /* max-height: 200px; */
+    width: auto;
+
+}
+
+.safety-content {
+    /* padding: 2.5rem 0; */
+
+    /* these are the variables that i am messing around with and testing */
+
+    width: calc(75% - 16px); /* set the width of each object to 50% minus the margin */
+    /* height: 100px; set the height of each object to 100px */
+    /* background-color: #ccc; set a background color for each object */
+
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 300;
+    color: #4a4a4a;
+
+    text-align: left;;
+}
+
+.safety-content li::before {
+    content: "\2022"; /* inserts a bullet point */
+    color: red; /* sets the color of the bullet point */
+    font-size: 1.5em; /* sets the size of the bullet point */
+    margin-right: 0.5em; /* adds space between the bullet point and the list item text */
+}
+
+.safety-content h2 {
+    padding-bottom: .5rem;
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #4a4a4a;
+}
+
+.safety-content h3 {
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 300;
+    color: #4a4a4a;
+}
+
+@media only screen and (max-width: 895px) {
+    #safety-section {
+        padding: 1rem;
+    }
+
+    .safety-container {
+        margin: 0px .5rem;
+        padding: 1rem;
+    }
+
+    .safety-content h2 {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+
+    .safety-content h3 {
+        font-size: .875rem;
+        line-height: 1.4;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #safety-section {
+        flex-flow: column;
+        padding: 0;
+    }
+
+    .safety-container {
+        margin: 0;
+        padding: 1.25rem 1rem 0 1rem;
+    }
+
+    .safety-content {
+        padding: 1.25rem 0 1.875rem 0;
     }
 }
